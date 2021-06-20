@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
+import { Modal } from 'bootstrap'
 import "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
