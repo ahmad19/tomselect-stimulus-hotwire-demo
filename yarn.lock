@@ -911,6 +911,11 @@
   resolved "https://registry.yarnpkg.com/@orchidjs/sifter/-/sifter-0.7.2.tgz#17221a07deb6f5c79af6cafdee27a9e3a22826f8"
   integrity sha512-DYahAnfeaTtWEiVhxTm+4npAt9gn4ODbR5gNDp16XqhWtFn9/i9uJS5paUvlQ74a3/mL86IazlkXCVXsZJAWhQ==
 
+"@popperjs/core@^2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
+  integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
+
 "@rails/actioncable@^6.0.0":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.4.tgz#d533c3d9176ed7763145162dec4f460a9d6fb550"
