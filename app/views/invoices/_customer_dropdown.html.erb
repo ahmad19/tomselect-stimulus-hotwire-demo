@@ -1,0 +1,4 @@
+<div class="col-md-12" data-controller="customers">
+  <label class="form-label">Customer</label>
+  <%= select_tag('invoice[customer_id]', options_for_select(customers.map { |c| [c.name.humanize, c.id] }, @customer.id), class: 'form-select form-select-solid') %>
+</div>
