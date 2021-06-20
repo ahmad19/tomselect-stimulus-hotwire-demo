@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  due_date: 2021-06-20
+
+two:
+  customer: two
+  due_date: 2021-06-20
