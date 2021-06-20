@@ -16,9 +16,10 @@ This is the implementation of [tom-select](https://github.com/orchidjs/tom-selec
 This application is a simple CRUD application where user can create invoices. In the invoice form, user can select from the available customers in the dropdown or create one on the fly. So when you spin up the server,
 
 1. Go to new invoice page - `invoices/new`
-2. Click on the customer's autocomplete dropdown, type some unique name which is not already in the db and press enter
+2. Click on the customer's autocomplete dropdown, type some unique name which is not already in the list and press enter
 3. A modal will open where you can fill up the new customer's detail and submit it
 4. If success, then modal will close and newly created customer will be selected in the dropdown.
+5. If failure, then modal will show the errors.
 
 # Implementation
 
