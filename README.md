@@ -9,6 +9,8 @@ Demo - https://tom-select-rails-demo.herokuapp.com
 
 This is the implementation of [tom-select](https://github.com/orchidjs/tom-select) in a rails application with stimulus and hotwire. Tom-select is a fork of `selectize` which does not have jQuery dependency.
 
+![Alt text](demo.gif)
+
 # How to see ?
 
 This application is a simple CRUD application where user can create invoices. In the invoice form, user can select from the available customers in the dropdown or create one on the fly. So when you spin up the server,
