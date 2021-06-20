@@ -21,9 +21,9 @@ This application is a simple CRUD application where user can create invoices. In
 4. If success, then modal will close and newly created customer will be selected in the dropdown.
 5. If failure, then modal will show the errors.
 
-# Implementation
+# Implementation Idea
 
-## On connect
+## On stimulus connect
 
 The customer dropdown has a stimulus controller connected to it. When the invoice form renders, stimulus controller will get connected and `connect()` function will get called and enables `tom-select` on that dropdown. It also mentions to open a dropdown when `create` option is selected.
 
@@ -31,7 +31,7 @@ The customer dropdown has a stimulus controller connected to it. When the invoic
 
 When the customer is successfully created on the modal, rails's will send the response in turbo-stream format which will be handled by `create.turbo_stream.erb`. What it does is basically finds the original dropdown in the invoice form and updates it with new dropdown which has all the latest customers such that the dropdown in the invoice form has the details of the customer selected which is being just created by user.
 
-## On disconnect
+## On stimulus disconnect
 
 When the new dropdown replaces the old dropdown, stimulus controller calls `disconnect` function which basically has three things
 
