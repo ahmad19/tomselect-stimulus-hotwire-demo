@@ -1,4 +1,5 @@
 import { Controller } from "stimulus"
+import Rails from '@rails/ujs';
 import { Modal } from "bootstrap";
 import TomSelect from "tom-select";
 
@@ -13,6 +14,20 @@ export default class extends Controller {
     }
   }
 
+  disconnect() {
+    const myModalEl = document.getElementById('customer-modal');
+    myModal.hide();
+    const customerForm = document.getElementById("new_customer");
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+      if (selectizeCallback !== null) {
+        selectizeCallback();
+        selectizeCallback = null;
+      }
+      customerForm.reset();
+      Rails.enableElement(customerForm);
+    });
+  }
+
   enableTS() {
     new TomSelect("#invoice_customer_id", {
       create: function(input, callback) {
@@ -21,6 +36,8 @@ export default class extends Controller {
           keyboard: false
         });
         myModal.show();
+        const name = document.getElementById('customer_name');
+        name.value = input;
       }
     });
   }
