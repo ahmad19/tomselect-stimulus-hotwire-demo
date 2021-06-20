@@ -13,7 +13,7 @@
 
   <div class="col-md-12">
     <%= form.label :customer_id, class: 'form-label' %>
-    <%= form.text_field :customer_id, class: 'form-control' %>
+    <%= form.select(:customer_id, options_for_select(@customers.map{ |c| [c.name, c.id] }), {include_blank: true}, class: 'form-select') %>
   </div>
 
   <div class="col-md-12">
