@@ -1,0 +1,27 @@
+<%= form_with(model: customer, html: { class: 'row g-3' }) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+        <% customer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-md-12">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field(:name, class: 'form-control') %>
+  </div>
+
+  <div class="col-md-12">
+    <%= form.label :email, class: 'form-label' %>
+    <%= form.text_field :email, class: 'form-select' %>
+  </div>
+
+  <div class="col-12">
+    <%= form.submit nil, class: 'btn btn-primary' %>
+  </div>
+<% end %>
