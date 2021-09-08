@@ -14,7 +14,7 @@
   <turbo-frame id="customers">
     <div class="col-md-12" data-controller="customers">
       <%= form.label :customer_id, class: 'form-label' %>
-      <%= form.select(:customer_id, options_for_select(@customers.map{ |c| [c.name, c.id] }), {include_blank: true}, class: 'form-select') %>
+      <%= form.select(:customer_id, options_for_select(@customers.map{ |c| [c.name, c.id] }), {include_blank: true}, class: 'form-select', data: { customers_target: 'customerField' }) %>
     </div>
   </turbo-frame>
 

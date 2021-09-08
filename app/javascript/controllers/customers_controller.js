@@ -6,9 +6,9 @@ import TomSelect from "tom-select";
 let myModal = null;
 
 export default class extends Controller {
+  static targets = [ 'customerField' ];
   connect() {
-    let customerField = document.getElementById('invoice_customer_id');
-    if (customerField) {
+    if (this.hasCustomerFieldTarget) {
       this.enableTS();
     }
   }
@@ -24,7 +24,7 @@ export default class extends Controller {
   }
 
   enableTS() {
-    new TomSelect("#invoice_customer_id", {
+    new TomSelect(this.customerFieldTarget, {
       create: function(input, _callback) {
         myModal = new Modal(document.getElementById('customer-modal'), {
           keyboard: false
